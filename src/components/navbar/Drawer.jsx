@@ -1,3 +1,4 @@
+import NavBottom from "./NavBottom";
 import NavTop from "./NavTop";
 
 export default function Drawer({ children }) {
@@ -11,6 +12,7 @@ export default function Drawer({ children }) {
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <NavTop />
+        <NavBottom />
         {/* Page content here */}
         <main>{children}</main>
       </div>

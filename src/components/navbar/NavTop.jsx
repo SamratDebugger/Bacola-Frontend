@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export default function NavTop() {
   return (
-    <header data-theme="light" className="bg-base-100">
+    <header className="bg-base-100">
       <div className="navbar max-w-360 mx-auto px-5 font-inter lg:gap-10">
         <div className="navbar-start lg:w-auto gap-5">
           <div className="flex-none lg:hidden">
