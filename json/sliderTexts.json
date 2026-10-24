@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "discount": 30,
+    "title": "A different kind of grocery store",
+    "description": "Only this week. Don't miss...",
+    "price": 7.99,
+    "img": "/assets/images/slider-1.jpg"
+  },
+  {
+    "id": 1,
+    "discount": 30,
+    "title": "Quality freshness guaranteed!",
+    "description": "Only this week. Don't miss...",
+    "price": 14.35,
+    "img": "/assets/images/slider-2.jpg"
+  },
+  {
+    "id": 2,
+    "discount": 30,
+    "title": "Having the best qualit products",
+    "description": "Only this week. Don't miss...",
+    "price": 5.45,
+    "img": "/assets/images/slider-3.jpg"
+  }
+]

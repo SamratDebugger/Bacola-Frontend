@@ -19,7 +19,7 @@ export default function NavBottom() {
           </button>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 text-lg uppercase gap-3">
+          <ul className="menu menu-horizontal px-1 text-lg uppercase gap-3 ">
             <NavMenus />
           </ul>
         </div>
