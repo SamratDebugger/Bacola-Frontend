@@ -15,14 +15,15 @@
 }
 
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
   background: #444;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.swiper-slide:not(:last-child) {
+  @apply border-r border-r-black/1!;
 }
 
 .swiper-slide img {

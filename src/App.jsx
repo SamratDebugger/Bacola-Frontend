@@ -10,6 +10,8 @@ import Bakery from "./pages/Bakery";
 import Beverages from "./pages/Beverages";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+// Import Swiper styles
+import "swiper/css";
 
 export default function App() {
   return (

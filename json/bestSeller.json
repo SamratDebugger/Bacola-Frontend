@@ -1,0 +1,78 @@
+[
+  {
+    "id": 0,
+    "discount": 38,
+    "title": "USDA Choice Angus Beef Stew Meat",
+    "availability": "IN STOCK",
+    "regularPrice": 79.99,
+    "discountedPrice": 49.99,
+    "img": "/assets/images/beef.jpg"
+  },
+  {
+    "id": 1,
+    "discount": 14,
+    "title": "Vital Farms Pasture-Raised Egg Bites Bacon & Cheddar",
+    "availability": "IN STOCK",
+    "regularPrice": 29,
+    "discountedPrice": 25,
+    "img": "/assets/images/egg-bite.jpg"
+  },
+  {
+    "id": 2,
+    "discount": 26,
+    "title": "Werther’s Original Caramel Hard Candies",
+    "availability": "IN STOCK",
+    "regularPrice": 20,
+    "discountedPrice": 14.97,
+    "img": "/assets/images/candy.jpg"
+  },
+  {
+    "id": 3,
+    "discount": 23,
+    "type": "Recommended",
+    "title": "All Natural Italian-Style Chicken Meatballs",
+    "availability": "IN STOCK",
+    "regularPrice": 9.35,
+    "discountedPrice": 7.25,
+    "img": "/assets/images/meat-ball.jpg"
+  },
+  {
+    "id": 4,
+
+    "title": "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+    "availability": "IN STOCK",
+
+    "discountedPrice": 7.99,
+    "img": "/assets/images/chiken-pop.jpg"
+  },
+  {
+    "id": 5,
+    "discount": 19,
+    "type": "Organic",
+    "title": "Field Roast Chao Cheese Creamy Original",
+    "availability": "OUT OF STOCK",
+    "regularPrice": 24,
+    "discountedPrice": 19.5,
+    "img": "/assets/images/cheese.jpg"
+  },
+  {
+    "id": 6,
+    "discount": 10,
+    "type": "Organic",
+    "title": "Blue Diamond Almonds Lightly Salted",
+    "availability": "OUT OF STOCK",
+    "regularPrice": 11.68,
+    "discountedPrice": 10.58,
+    "img": "/assets/images/salt.jpg"
+  },
+  {
+    "id": 7,
+    "discount": 15,
+
+    "title": "Nestle Original Coffee-Mate Coffee Creamer",
+    "availability": "IN STOCK",
+    "regularPrice": 11.68,
+    "discountedPrice": 10.58,
+    "img": "/assets/images/coffee.jpg"
+  }
+]

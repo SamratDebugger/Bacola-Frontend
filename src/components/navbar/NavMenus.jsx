@@ -6,9 +6,8 @@ import { Link } from "react-router";
 export default function NavMenus() {
   return (
     <>
-      {" "}
       <li>
-        <Link to="/shop">Shop</Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
         <Link to="/meats-and-seafood">
