@@ -1,78 +1,89 @@
 [
   {
     "id": 0,
-    "discount": 38,
+    "hasDiscount": true,
     "title": "USDA Choice Angus Beef Stew Meat",
-    "availability": "IN STOCK",
+    "isAvailable": true,
     "regularPrice": 79.99,
     "discountedPrice": 49.99,
+    "isRecommended": false,
+    "isOrganic": false,
     "img": "/assets/images/beef.jpg"
   },
   {
     "id": 1,
-    "discount": 14,
+    "hasDiscount": true,
     "title": "Vital Farms Pasture-Raised Egg Bites Bacon & Cheddar",
-    "availability": "IN STOCK",
+    "isAvailable": true,
     "regularPrice": 29,
     "discountedPrice": 25,
+    "isRecommended": false,
+    "isOrganic": false,
     "img": "/assets/images/egg-bite.jpg"
   },
   {
     "id": 2,
-    "discount": 26,
+    "hasDiscount": true,
     "title": "Werther’s Original Caramel Hard Candies",
-    "availability": "IN STOCK",
+    "isAvailable": true,
     "regularPrice": 20,
     "discountedPrice": 14.97,
+    "isRecommended": false,
+    "isOrganic": false,
     "img": "/assets/images/candy.jpg"
   },
   {
     "id": 3,
-    "discount": 23,
-    "type": "Recommended",
+    "hasDiscount": true,
     "title": "All Natural Italian-Style Chicken Meatballs",
-    "availability": "IN STOCK",
+    "isAvailable": true,
     "regularPrice": 9.35,
     "discountedPrice": 7.25,
+    "isRecommended": true,
+    "isOrganic": false,
     "img": "/assets/images/meat-ball.jpg"
   },
   {
     "id": 4,
-
+    "hasDiscount": false,
     "title": "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
-    "availability": "IN STOCK",
-
+    "isAvailable": true,
     "discountedPrice": 7.99,
+    "isRecommended": false,
+    "isOrganic": false,
     "img": "/assets/images/chiken-pop.jpg"
   },
   {
     "id": 5,
-    "discount": 19,
-    "type": "Organic",
+    "hasDiscount": true,
     "title": "Field Roast Chao Cheese Creamy Original",
-    "availability": "OUT OF STOCK",
+    "isAvailable": false,
     "regularPrice": 24,
     "discountedPrice": 19.5,
+    "isRecommended": false,
+    "isOrganic": true,
     "img": "/assets/images/cheese.jpg"
   },
   {
     "id": 6,
-    "discount": 10,
-    "type": "Organic",
+    "hasDiscount": true,
     "title": "Blue Diamond Almonds Lightly Salted",
-    "availability": "OUT OF STOCK",
+    "isAvailable": false,
     "regularPrice": 11.68,
     "discountedPrice": 10.58,
+    "isRecommended": false,
+    "isOrganic": true,
     "img": "/assets/images/salt.jpg"
   },
   {
     "id": 7,
-    "discount": 15,
-
+    "hasDiscount": true,
     "title": "Nestle Original Coffee-Mate Coffee Creamer",
-    "availability": "IN STOCK",
+    "isAvailable": true,
     "regularPrice": 11.68,
     "discountedPrice": 10.58,
+    "isRecommended": false,
+    "isOrganic": false,
     "img": "/assets/images/coffee.jpg"
   }
 ]

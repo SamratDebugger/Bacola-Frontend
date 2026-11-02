@@ -3,16 +3,25 @@ import { BsHeart } from "react-icons/bs";
 import Rating from "./Rating";
 
 export default function ProductCard({ product }) {
-  const isAvailable = product.availability?.toLowerCase() !== "out of stock";
+  const isAvailable = product.isAvailable;
+  const discountedPercentage =
+    100 - (product.discountedPrice * 100) / product.regularPrice;
 
   return (
-    <div className="card rounded-none bg-base-100 relative group h-full">
-      {product.discount ? (
-        <div className="badge badge-info mt-5 ml-5">{product.discount}%</div>
-      ) : null}
-      {product.type ? (
-        <div className="badge badge-success badge-soft ml-5 mt-2">{product.type}</div>
-      ) : null}
+    <div className="card rounded-none bg-base-100 group h-full border-r border-black/10">
+      <div className="flex flex-col gap-1 absolute p-5">
+        {product.hasDiscount && (
+          <div className="badge badge-sm badge-info ">
+            {Math.round(discountedPercentage)}%
+          </div>
+        )}
+        {product.isOrganic && (
+          <div className="badge badge-sm badge-success badge-soft">Organic</div>
+        )}
+        {product.isRecommended && (
+          <div className="badge badge-sm badge-soft">Recommended</div>
+        )}
+      </div>
 
       <div className="absolute group-hover:grid top-5 right-5 hidden gap-2 z-10">
         <button className="btn btn-circle hover:bg-main hover:text-white bg-transparent">
@@ -24,21 +33,37 @@ export default function ProductCard({ product }) {
       </div>
 
       <figure className="overflow-hidden">
-        <img src={product.img} alt={product.title || "Product image"} className="w-full h-64 object-cover" />
+        <img
+          src={product.img}
+          alt={product.title || "Product image"}
+          className="w-full h-64 object-cover"
+        />
       </figure>
 
       <div className="card-body p-4">
-        <p className="font-inter font-bold line-clamp-2 min-h-[3rem]">{product.title}</p>
-        <p className={isAvailable ? "text-success uppercase" : "text-error uppercase"}>{product.availability}</p>
+        <p className="font-inter font-bold line-clamp-2 min-h-12">
+          {product.title}
+        </p>
+        <p
+          className={
+            isAvailable ? "text-success uppercase" : "text-error uppercase"
+          }
+        >
+          {product.availability}
+        </p>
 
         <Rating />
 
         <div className="card-actions flex-col items-start gap-3">
           <div className="flex items-center gap-3">
             {product.regularPrice ? (
-              <span className="text-gray-500 line-through text-lg">${product.regularPrice}</span>
+              <span className="text-gray-500 line-through text-lg">
+                ${product.regularPrice}
+              </span>
             ) : null}
-            <span className="text-error text-xl font-bold">${product.discountedPrice}</span>
+            <span className="text-error text-xl font-bold">
+              ${product.discountedPrice}
+            </span>
           </div>
 
           <button

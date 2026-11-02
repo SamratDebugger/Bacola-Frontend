@@ -1,11 +1,12 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import ProductCarousel from "./ProductCarousel";
+import Ads from "./Ads";
 
 export default function BestSeller() {
   return (
-    <div className="grid grid-cols-12 font-dosis  ">
+    <div className="grid grid-cols-12 font-dosis my-15 ">
       <div className="col-span-3 max-lg:hidden">
-        <img src="/assets/images/banner-box-1.jpg" alt="banner-box" />
+        <Ads />
       </div>
 
       <div className="col-span-12 lg:col-span-9  ">
