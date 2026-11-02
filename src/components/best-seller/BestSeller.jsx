@@ -3,10 +3,19 @@ import ProductCarousel from "./ProductCarousel";
 import Ads from "./Ads";
 
 export default function BestSeller() {
+  const content = {
+    subtitle: "Bacola Natural Foods",
+    isDark: false,
+    title1: "Special Organic",
+    title2: "Roats Burger.",
+    price: 14.99,
+    hasButton: false,
+    img: "/assets/images/banner-box-1.jpg",
+  };
   return (
     <div className="grid grid-cols-12 font-dosis my-15 ">
       <div className="col-span-3 max-lg:hidden">
-        <Ads />
+        <Ads content={content} />
       </div>
 
       <div className="col-span-12 lg:col-span-9  ">
