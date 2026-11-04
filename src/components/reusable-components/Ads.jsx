@@ -1,6 +1,6 @@
 export default function Ads({ content }) {
   return (
-    <div className="relative font-inter">
+    <div className="relative font-inter pr-5">
       <div className="absolute top-10 left-10">
         <h3 className={`${content.isDark ? "text-gray-500" : "text-white"}`}>
           {content.subtitle}

@@ -1,4 +1,7 @@
-import Ads from "../best-seller/Ads";
+import Ads from "../reusable-components/Ads";
+import View from "../reusable-components/View";
+import Offer from "./Offer";
+import Safety from "./Safety";
 
 export default function HotProduct() {
   const content = {
@@ -11,21 +14,27 @@ export default function HotProduct() {
     btn: "Shop Now",
     img: "/assets/images/banner-box-2.jpg",
   };
+  const view = {
+    title: "HOT PRODUCT FOR THIS WEEK",
+    description:
+      "Don't miss this opportunity at a special discount just for this week.",
+    button: "View All",
+  };
   return (
     <div className="grid grid-cols-12">
-      <div className="col-span-3">
+      <div className="lg:col-span-3 max-lg:hidden">
         <Ads content={content} />
       </div>
-      <div className="col-span-9">
-        <div className="flex justify-between bg-[url(/assets/images/safety-banner.jpg)] ...">
-          <div className="m-5">
-            <h4 className="text-gray-500">Always Taking Care</h4>
-            <h3 className="text-xl">
-              In store or online your health,safety is our top priority.
-            </h3>
-          </div>
+      <div className="col-span-12 lg:col-span-9">
+        <div>
+          <Safety />
         </div>
-        <div></div>
+        <div className="my-10">
+          <View view={view} />
+        </div>
+        <div>
+          <Offer />
+        </div>
       </div>
     </div>
   );
