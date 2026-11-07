@@ -18,7 +18,7 @@ export default function BestSeller() {
     button: " View All ",
   };
   return (
-    <div className="grid grid-cols-12 font-dosis my-15 ">
+    <div className="grid grid-cols-12 font-dosis my-15 gap-5">
       <div className="col-span-3 max-lg:hidden">
         <Ads content={content} />
       </div>
