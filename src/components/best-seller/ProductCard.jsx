@@ -32,11 +32,11 @@ export default function ProductCard({ product }) {
         </button>
       </div>
 
-      <figure className="overflow-hidden">
+      <figure className="">
         <img
           src={product.img}
           alt={product.title || "Product image"}
-          className="w-full h-64 object-cover"
+          className="aspect-square object-cover"
         />
       </figure>
 

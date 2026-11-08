@@ -8,7 +8,8 @@
     "discountedPrice": 49.99,
     "isRecommended": false,
     "isOrganic": false,
-    "img": "/assets/images/beef.jpg"
+    "img": "/assets/images/beef.jpg",
+    "category": "Meats and seafood"
   },
   {
     "id": 1,
@@ -19,7 +20,8 @@
     "discountedPrice": 25,
     "isRecommended": false,
     "isOrganic": false,
-    "img": "/assets/images/egg-bite.jpg"
+    "img": "/assets/images/egg-bite.jpg",
+    "category": "Breakfast & Dairy"
   },
   {
     "id": 2,
@@ -30,7 +32,8 @@
     "discountedPrice": 14.97,
     "isRecommended": false,
     "isOrganic": false,
-    "img": "/assets/images/candy.jpg"
+    "img": "/assets/images/candy.jpg",
+    "category": "Biscuits & Snacks"
   },
   {
     "id": 3,
@@ -41,7 +44,8 @@
     "discountedPrice": 7.25,
     "isRecommended": true,
     "isOrganic": false,
-    "img": "/assets/images/meat-ball.jpg"
+    "img": "/assets/images/meat-ball.jpg",
+    "category": "Meats and seafood"
   },
   {
     "id": 4,
@@ -51,7 +55,8 @@
     "discountedPrice": 7.99,
     "isRecommended": false,
     "isOrganic": false,
-    "img": "/assets/images/chiken-pop.jpg"
+    "img": "/assets/images/chiken-pop.jpg",
+    "category": "Biscuits & Snacks"
   },
   {
     "id": 5,
@@ -62,7 +67,8 @@
     "discountedPrice": 19.5,
     "isRecommended": false,
     "isOrganic": true,
-    "img": "/assets/images/cheese.jpg"
+    "img": "/assets/images/cheese.jpg",
+    "category": "Grocery & Staples"
   },
   {
     "id": 6,
@@ -73,7 +79,8 @@
     "discountedPrice": 10.58,
     "isRecommended": false,
     "isOrganic": true,
-    "img": "/assets/images/salt.jpg"
+    "img": "/assets/images/salt.jpg",
+    "category": " Grocery & Staples"
   },
   {
     "id": 7,
@@ -84,6 +91,7 @@
     "discountedPrice": 10.58,
     "isRecommended": false,
     "isOrganic": false,
-    "img": "/assets/images/coffee.jpg"
+    "img": "/assets/images/coffee.jpg",
+    "category": "Grocery & Staples"
   }
 ]
