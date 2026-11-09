@@ -1,6 +1,7 @@
 import { FaExpandArrowsAlt } from "react-icons/fa";
 import { BsHeart } from "react-icons/bs";
 import Rating from "./Rating";
+import { Link } from "react-router";
 
 export default function ProductCard({ product }) {
   const isAvailable = product.isAvailable;
@@ -31,19 +32,23 @@ export default function ProductCard({ product }) {
           <BsHeart className="size-[1.2em]" />
         </button>
       </div>
-
-      <figure className="">
-        <img
-          src={product.img}
-          alt={product.title || "Product image"}
-          className="aspect-square object-cover"
-        />
-      </figure>
+      <Link to={`/${product.categorySlug}/${product.id}`}>
+        <figure className="">
+          <img
+            src={product.img}
+            alt={product.title || "Product image"}
+            className="aspect-square object-cover"
+          />
+        </figure>
+      </Link>
 
       <div className="card-body p-4">
-        <p className="font-inter font-bold line-clamp-2 min-h-12">
-          {product.title}
-        </p>
+        <Link to={`/${product.categorySlug}/${product.id}`}>
+          {" "}
+          <p className="font-inter font-bold line-clamp-2 min-h-12">
+            {product.title}
+          </p>
+        </Link>
         <p
           className={
             isAvailable ? "text-success uppercase" : "text-error uppercase"
@@ -65,13 +70,14 @@ export default function ProductCard({ product }) {
               ${product.discountedPrice}
             </span>
           </div>
-
-          <button
-            className={`btn w-full rounded-full ${isAvailable ? "btn-info btn-outline hover:text-white" : "btn-disabled"}`}
-            disabled={!isAvailable}
-          >
-            {isAvailable ? "Add to cart" : "Out of stock"}
-          </button>
+          <Link to={`/${product.categorySlug}/${product.id}`}>
+            <button
+              className={`btn w-full rounded-full ${isAvailable ? "btn-info btn-outline hover:text-white" : "btn-disabled"}`}
+              disabled={!isAvailable}
+            >
+              {isAvailable ? "Add to cart" : "Out of stock"}
+            </button>
+          </Link>
         </div>
       </div>
     </div>

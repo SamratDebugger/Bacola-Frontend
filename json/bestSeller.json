@@ -9,7 +9,8 @@
     "isRecommended": false,
     "isOrganic": false,
     "img": "/assets/images/beef.jpg",
-    "category": "Meats and seafood"
+    "category": "Meats and seafood",
+    "categorySlug": "meats-and-seafood"
   },
   {
     "id": 1,
@@ -21,7 +22,8 @@
     "isRecommended": false,
     "isOrganic": false,
     "img": "/assets/images/egg-bite.jpg",
-    "category": "Breakfast & Dairy"
+    "category": "Breakfast & Dairy",
+    "categorySlug": "breakfast-and-dairy"
   },
   {
     "id": 2,
@@ -33,7 +35,8 @@
     "isRecommended": false,
     "isOrganic": false,
     "img": "/assets/images/candy.jpg",
-    "category": "Biscuits & Snacks"
+    "category": "Biscuits & Snacks",
+    "categorySlug": "biscuits-and-snacks"
   },
   {
     "id": 3,
@@ -45,7 +48,8 @@
     "isRecommended": true,
     "isOrganic": false,
     "img": "/assets/images/meat-ball.jpg",
-    "category": "Meats and seafood"
+    "category": "Meats and seafood",
+    "categorySlug": "meats-and-seafood"
   },
   {
     "id": 4,
@@ -56,7 +60,8 @@
     "isRecommended": false,
     "isOrganic": false,
     "img": "/assets/images/chiken-pop.jpg",
-    "category": "Biscuits & Snacks"
+    "category": "Biscuits & Snacks",
+    "categorySlug": "biscuits-and-snacks"
   },
   {
     "id": 5,
@@ -68,7 +73,8 @@
     "isRecommended": false,
     "isOrganic": true,
     "img": "/assets/images/cheese.jpg",
-    "category": "Grocery & Staples"
+    "category": "Grocery & Staples",
+    "categorySlug": "grocery-and-staples"
   },
   {
     "id": 6,
@@ -80,7 +86,8 @@
     "isRecommended": false,
     "isOrganic": true,
     "img": "/assets/images/salt.jpg",
-    "category": " Grocery & Staples"
+    "category": " Grocery & Staples",
+    "categorySlug": "grocery-and-staples"
   },
   {
     "id": 7,
@@ -92,6 +99,7 @@
     "isRecommended": false,
     "isOrganic": false,
     "img": "/assets/images/coffee.jpg",
-    "category": "Grocery & Staples"
+    "category": "Grocery & Staples",
+    "categorySlug": "grocery-and-staples"
   }
 ]
