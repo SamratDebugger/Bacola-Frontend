@@ -12,6 +12,7 @@ import "swiper/css";
 import Product from "./pages/Product";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
+import ForgotPassword from "./pages/ForgotPassword";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/:category/:product" element={<Product />} />
           <Route path="*" element={<NotFound />} />
         </Route>

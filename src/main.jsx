@@ -4,13 +4,19 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router";
 import TanstackProvider from "../tanstack/TanstackProdiver.jsx";
+import AuthProvider from "../context/AuthProvider.jsx";
+import CartProvider from "../context/CartProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <TanstackProvider>
-        <App />
-      </TanstackProvider>
+      <AuthProvider>
+        <CartProvider>
+          <TanstackProvider>
+            <App />
+          </TanstackProvider>
+        </CartProvider>
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>,
 );

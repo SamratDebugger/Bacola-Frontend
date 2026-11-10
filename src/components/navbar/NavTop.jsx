@@ -56,7 +56,7 @@ export default function NavTop() {
           </Link>
         </div>
         <div className="navbar-end lg:w-auto lg:gap-5">
-          <Link className="max-lg:hidden">
+          <Link to="/login" className="max-lg:hidden">
             <button className="btn btn-circle ">
               <FaUser />
             </button>
