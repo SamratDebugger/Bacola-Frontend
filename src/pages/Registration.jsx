@@ -3,7 +3,9 @@ import { FaEnvelope, FaEye, FaKey, FaUser } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router";
 import { auth } from "../../firebase/firebase.config";
 import { toast } from "react-toastify";
+import { useState } from "react";
 export default function Registration() {
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,11 +58,13 @@ export default function Registration() {
             <FaKey className="opacity-50" />
             <input
               name="password"
-              type="password"
+              type={isVisible ? "text" : "password"}
               className="grow"
               placeholder="Password"
             />
-            <FaEye className="opacity-50" />
+            <button type="button" onClick={() => setIsVisible(!isVisible)}>
+              <FaEye className="" />
+            </button>
           </label>
 
           <button className="btn btn-neutral mt-4">Registration</button>

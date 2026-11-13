@@ -3,8 +3,10 @@ import { Link, useNavigate } from "react-router";
 import { auth } from "../../firebase/firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 export default function Login() {
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,11 +47,13 @@ export default function Login() {
             <FaKey className="opacity-50" />
             <input
               name="password"
-              type="password"
+              type={isVisible ? "text" : "password"}
               className="grow"
               placeholder="Password"
             />
-            <FaEye className="opacity-50" />
+            <button type="button" onClick={() => setIsVisible(!isVisible)}>
+              <FaEye className="" />
+            </button>
           </label>
           <Link to="/forgot-password" className="link link-hover link-info">
             Forgot Password
