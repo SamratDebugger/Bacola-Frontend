@@ -1,9 +1,26 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { FaEnvelope, FaEye, FaKey, FaUser } from "react-icons/fa6";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { auth } from "../../firebase/firebase.config";
+import { toast } from "react-toastify";
 export default function Registration() {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/dashboard");
+      toast.success("Registration Sucessful");
+    } catch (error) {
+      toast.error("Registration failed");
+      error(error.message);
+    }
+  };
   return (
     <section className="p-5 min-h-[calc(100dvh-156px)] flex items-center justify-center">
-      <form className="">
+      <form onSubmit={handleSubmit} className="">
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto">
           <legend className="fieldset-legend text-2xl">Registration</legend>
 
@@ -48,7 +65,7 @@ export default function Registration() {
 
           <button className="btn btn-neutral mt-4">Registration</button>
           <p>
-            Don't have account?{" "}
+            Already have an account?{" "}
             <Link to="/login" className="link link-hover link-info">
               Login Here
             </Link>
