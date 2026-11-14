@@ -1,8 +1,15 @@
 import { FaBottleWater, FaDollarSign, FaHeart, FaTruck } from "react-icons/fa6";
 import Rating from "../best-seller/Rating";
 import Socials from "./Socials";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
 export default function ProductInfo({ singleProduct }) {
+  const { addToCart } = useContext(CartContext);
+  const handleCart = () => {
+    const quantity = 1;
+    addToCart(singleProduct, quantity);
+  };
   return (
     <section className="max-w-360 p-5 mx-auto bg-base-100 shadow-sm rounded-box">
       <div>
@@ -38,6 +45,7 @@ export default function ProductInfo({ singleProduct }) {
             <span>1</span>
             <button className="btn btn-circle">+</button>
             <button
+              onClick={handleCart}
               disabled={!singleProduct.isAvailable}
               className="btn btn-info text-white rounded-full"
             >

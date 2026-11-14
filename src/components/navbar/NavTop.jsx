@@ -1,7 +1,11 @@
 import { FaArrowDown, FaMagnifyingGlass, FaUser } from "react-icons/fa6";
 import { Link } from "react-router";
+import CartCard from "./CartCard";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
 export default function NavTop() {
+  const { totalItem, subTotal } = useContext(CartContext);
   return (
     <header className="bg-base-100">
       <div className="navbar max-w-360 mx-auto px-5 font-inter lg:gap-10">
@@ -61,7 +65,7 @@ export default function NavTop() {
               <FaUser />
             </button>
           </Link>
-          <span>$0.00</span>
+          <span>${subTotal()}</span>
           <div className="dropdown dropdown-end gap-5">
             <div
               tabIndex={0}
@@ -86,24 +90,11 @@ export default function NavTop() {
                 </svg>
 
                 <span className="badge badge-sm badge-error indicator-item ">
-                  8
+                  {totalItem()}
                 </span>
               </div>
             </div>
-            <div
-              tabIndex={0}
-              className="card card-sm dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
-            >
-              <div className="card-body">
-                <span className="text-lg font-bold">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
-                <div className="card-actions">
-                  <button className="btn btn-primary btn-block">
-                    View cart
-                  </button>
-                </div>
-              </div>
-            </div>
+            <CartCard />
           </div>
         </div>
       </div>

@@ -2,12 +2,18 @@ import { FaExpandArrowsAlt } from "react-icons/fa";
 import { BsHeart } from "react-icons/bs";
 import Rating from "./Rating";
 import { Link } from "react-router";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
 export default function ProductCard({ product }) {
+  const { addToCart } = useContext(CartContext);
   const isAvailable = product.isAvailable;
   const discountedPercentage =
     100 - (product.discountedPrice * 100) / product.regularPrice;
-
+  const handleCart = () => {
+    const quantity = 1;
+    addToCart(product, quantity);
+  };
   return (
     <div className="card rounded-none bg-base-100 group h-full border-r border-black/10">
       <div className="flex flex-col gap-1 absolute p-5">
@@ -70,14 +76,14 @@ export default function ProductCard({ product }) {
               ${product.discountedPrice}
             </span>
           </div>
-          <Link to={`/${product.categorySlug}/${product.id}`}>
-            <button
-              className={`btn w-full rounded-full ${isAvailable ? "btn-info btn-outline hover:text-white" : "btn-disabled"}`}
-              disabled={!isAvailable}
-            >
-              {isAvailable ? "Add to cart" : "Out of stock"}
-            </button>
-          </Link>
+
+          <button
+            onClick={handleCart}
+            className={`btn w-full rounded-full ${isAvailable ? "btn-info btn-outline hover:text-white" : "btn-disabled"}`}
+            disabled={!isAvailable}
+          >
+            {isAvailable ? "Add to cart" : "Out of stock"}
+          </button>
         </div>
       </div>
     </div>
