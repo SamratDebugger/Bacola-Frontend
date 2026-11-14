@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 import { toast } from "react-toastify";
 
 export default function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCartItems = localStorage.getItem("cartItems");
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   //add to cart function
   const addToCart = (product, quantity) => {
     const existingProduct = cartItems.find((item) => item.id === product.id);
