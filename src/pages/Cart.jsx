@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import CartTable from "../components/product/CartTable";
+import { CartContext } from "../../context/CartContext";
 
 export default function Cart() {
+  const { cartItems, subTotal, removeFromCart } = useContext(CartContext);
   return (
     <>
       <section className="max-w-360 p-5 mx-auto">
@@ -17,34 +20,35 @@ export default function Cart() {
         </div>
       </section>
       <section className="max-w-360 p-5 mx-auto">
-        <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-9">
-            <CartTable />
+        <div className="grid lg:grid-cols-12 gap-5">
+          <div className="lg:col-span-9">
+            <CartTable cartItems={cartItems} removeFromCart={removeFromCart} />
             <div className="divider"></div>
-            <div className="flex justify-between items-center">
-              <div className="join gap-3">
-                <div>
-                  <label className="input validator join-item outline-none border-none bg-gray-200">
-                    <input type="text" placeholder="Coupon Code" />
-                  </label>
-                </div>
+            <div className="flex max-md:flex-col justify-between md:items-center gap-5">
+              <div className="join gap-3 flex-1">
+                <label className="input join-item w-full md:max-w-md">
+                  <input className="" type="text" placeholder="Coupon Code" />
+                </label>
+
                 <button className="btn btn-info join-item">Apply Coupon</button>
               </div>
 
-              <button className="btn btn-info">Remove All</button>
+              <button className="btn btn-info max-md:w-full ">
+                Remove All
+              </button>
             </div>
           </div>
-          <div className="col-span-3 border border-black/10 p-5">
+          <div className="lg:col-span-3 border border-black/10 p-5">
             <h3 className="uppercase">Cart Totals</h3>
             <div className="divider"></div>
             <div className="flex items-center justify-between gap-5">
               <h3>Subtotal</h3>
-              <span>$100</span>
+              <span>${subTotal()}</span>
             </div>
             <div className="divider"></div>
             <div className="flex items-center justify-between gap-5">
               <h3>Total</h3>
-              <span>$100</span>
+              <span>${subTotal()}</span>
             </div>
             <div className="divider"></div>
             <button className="btn btn-error w-full text-white">

@@ -19,19 +19,26 @@ export default function CartProvider({ children }) {
       const newQuantity = existingProduct.quantity + quantity;
       setCartItems((prev) =>
         prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: newQuantity } : item,
+          item.id === product.id
+            ? {
+                ...item,
+                quantity: newQuantity,
+                total: item.price * newQuantity,
+              }
+            : item,
         ),
       );
       toast.success(`${product.title} added to cart`);
     } else {
+      const price =
+        product.discountedPrice ?? product.regularPrice ?? product.price;
       const newProduct = {
         id: product.id,
         title: product.title,
-        price: product.hasDiscount
-          ? product.discountedPrice
-          : product.regularPrice,
+        price,
         quantity,
         img: product.img,
+        total: price * quantity,
       };
       setCartItems((prev) => [...prev, newProduct]);
       toast.success(`${product.title} added to cart`);
