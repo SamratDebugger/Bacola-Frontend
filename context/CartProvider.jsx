@@ -67,7 +67,42 @@ export default function CartProvider({ children }) {
     }
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
-  const data = { cartItems, addToCart, subTotal, totalItem, removeFromCart };
+
+  //update quantity
+  const updateQuantity = (id, quantity) => {
+    if (quantity < 1) {
+      setCartItems((prev) =>
+        prev.map((item) =>
+          item.id === id
+            ? {
+                ...item,
+                quantity: 1,
+              }
+            : item,
+        ),
+      );
+    } else {
+      setCartItems((prev) =>
+        prev.map((item) =>
+          item.id === id
+            ? {
+                ...item,
+                quantity,
+              }
+            : item,
+        ),
+      );
+    }
+  };
+
+  const data = {
+    cartItems,
+    addToCart,
+    subTotal,
+    totalItem,
+    removeFromCart,
+    updateQuantity,
+  };
 
   return <CartContext value={data}>{children}</CartContext>;
 }

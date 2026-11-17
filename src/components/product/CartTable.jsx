@@ -1,5 +1,9 @@
 import { FaMinus, FaPlus, FaTrash } from "react-icons/fa6";
-export default function CartTable({ cartItems, removeFromCart }) {
+export default function CartTable({
+  cartItems,
+  removeFromCart,
+  updateQuantity,
+}) {
   return (
     <div className="overflow-x-auto">
       <table className="table">
@@ -40,11 +44,21 @@ export default function CartTable({ cartItems, removeFromCart }) {
               </td>
               <td className="">
                 <div className="flex gap-3">
-                  <button className="btn btn-circle btn-xs">
+                  <button
+                    onClick={() =>
+                      updateQuantity(cartItem.id, cartItem.quantity - 1)
+                    }
+                    className="btn btn-circle btn-xs"
+                  >
                     <FaMinus />
                   </button>
                   <span>{cartItem.quantity}</span>
-                  <button className="btn btn-circle btn-xs">
+                  <button
+                    onClick={() =>
+                      updateQuantity(cartItem.id, cartItem.quantity + 1)
+                    }
+                    className="btn btn-circle btn-xs"
+                  >
                     <FaPlus />
                   </button>
                 </div>

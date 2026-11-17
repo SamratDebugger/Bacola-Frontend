@@ -23,6 +23,12 @@ export default function Checkout() {
           </Link>
         </div>
       </section>
+      <section>
+        <div className="grid">
+          <div className="col-span-9"></div>
+          <div className="col-span-3"></div>
+        </div>
+      </section>
     </>
   );
 }

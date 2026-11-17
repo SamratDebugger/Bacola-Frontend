@@ -1,13 +1,27 @@
-import { FaBottleWater, FaDollarSign, FaHeart, FaTruck } from "react-icons/fa6";
+import {
+  FaBottleWater,
+  FaDollarSign,
+  FaHeart,
+  FaMinus,
+  FaPlus,
+  FaTruck,
+} from "react-icons/fa6";
 import Rating from "../best-seller/Rating";
 import Socials from "./Socials";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 
 export default function ProductInfo({ singleProduct }) {
   const { addToCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
+  const handleQuantity = (value) => {
+    if (value < 1) {
+      setQuantity(1);
+    } else {
+      setQuantity(value);
+    }
+  };
   const handleCart = () => {
-    const quantity = 1;
     addToCart(singleProduct, quantity);
   };
   return (
@@ -41,9 +55,19 @@ export default function ProductInfo({ singleProduct }) {
             malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent
           </p>
           <div className="flex justify-start gap-5 items-center">
-            <button className="btn btn-circle">-</button>
-            <span>1</span>
-            <button className="btn btn-circle">+</button>
+            <button
+              onClick={() => handleQuantity(quantity - 1)}
+              className="btn btn-circle"
+            >
+              <FaMinus />
+            </button>
+            <span>{quantity}</span>
+            <button
+              onClick={() => handleQuantity(quantity + 1)}
+              className="btn btn-circle"
+            >
+              <FaPlus />
+            </button>
             <button
               onClick={handleCart}
               disabled={!singleProduct.isAvailable}

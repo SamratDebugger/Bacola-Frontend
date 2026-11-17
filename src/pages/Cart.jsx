@@ -3,7 +3,8 @@ import CartTable from "../components/product/CartTable";
 import { CartContext } from "../../context/CartContext";
 
 export default function Cart() {
-  const { cartItems, subTotal, removeFromCart } = useContext(CartContext);
+  const { cartItems, subTotal, removeFromCart, updateQuantity } =
+    useContext(CartContext);
   return (
     <>
       <section className="max-w-360 p-5 mx-auto">
@@ -22,7 +23,11 @@ export default function Cart() {
       <section className="max-w-360 p-5 mx-auto">
         <div className="grid lg:grid-cols-12 gap-5">
           <div className="lg:col-span-9">
-            <CartTable cartItems={cartItems} removeFromCart={removeFromCart} />
+            <CartTable
+              updateQuantity={updateQuantity}
+              cartItems={cartItems}
+              removeFromCart={removeFromCart}
+            />
             <div className="divider"></div>
             <div className="flex max-md:flex-col justify-between md:items-center gap-5">
               <div className="join gap-3 flex-1">
