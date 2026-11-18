@@ -1,8 +1,12 @@
 import { Link } from "react-router";
+import CustomerInfo from "../components/product/CustomerInfo";
+import Order from "../components/product/Order";
+import { useRef } from "react";
 
 export default function Checkout() {
+  const formRef = useRef();
   return (
-    <>
+    <main className="bg-base-300">
       <section className="mx-auto max-w-360 px-5">
         <div className="breadcrumbs text-sm ">
           <ul>
@@ -16,19 +20,23 @@ export default function Checkout() {
         </div>
       </section>
       <section className="mx-auto max-w-360 p-5">
-        <div role="alert" className="alert border-base-300  alert-outline">
+        <div role="alert" className="alert bg-base-100  ">
           <span>Returning Customer?</span>{" "}
           <Link to="/login" className="link link-info">
             Click here to login
           </Link>
         </div>
       </section>
-      <section>
-        <div className="grid">
-          <div className="col-span-9"></div>
-          <div className="col-span-3"></div>
+      <section className="mx-auto max-w-360 p-5">
+        <div className="grid grid-cols-12 gap-5">
+          <div className="col-span-9">
+            <CustomerInfo ref={formRef} />
+          </div>
+          <div className="col-span-3">
+            <Order ref={formRef} />
+          </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
