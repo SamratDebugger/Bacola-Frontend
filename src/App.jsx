@@ -18,6 +18,7 @@ import Protected from "./pages/dashboard/Protected";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import OrderConfirm from "./pages/OrderConfirm";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order-confirm" element={<OrderConfirm />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/:category/:product" element={<Product />} />
           <Route path="*" element={<NotFound />} />

@@ -29,10 +29,10 @@ export default function Checkout() {
       </section>
       <section className="mx-auto max-w-360 p-5">
         <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-9">
+          <div className="col-span-8">
             <CustomerInfo ref={formRef} />
           </div>
-          <div className="col-span-3">
+          <div className="col-span-4">
             <Order ref={formRef} />
           </div>
         </div>
