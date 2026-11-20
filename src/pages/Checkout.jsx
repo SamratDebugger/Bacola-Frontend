@@ -28,11 +28,11 @@ export default function Checkout() {
         </div>
       </section>
       <section className="mx-auto max-w-360 p-5">
-        <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-8">
+        <div className="grid lg:grid-cols-12 gap-5">
+          <div className="lg:col-span-8">
             <CustomerInfo ref={formRef} />
           </div>
-          <div className="col-span-4">
+          <div className="lg:col-span-4">
             <Order ref={formRef} />
           </div>
         </div>

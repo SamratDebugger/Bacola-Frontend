@@ -1,11 +1,19 @@
+import { useNavigate } from "react-router";
+
 export default function CustomerInfo({ ref }) {
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/order-confirm");
+  };
   return (
     <form
+      onSubmit={handleSubmit}
       ref={ref}
       className="fieldset bg-base-100 border-base-200 rounded-box  border p-4"
     >
       <h3 className=" text-lg font-bold">Billing details</h3>
-      <div className="flex gap-5 justify-stretch">
+      <div className="flex gap-5 justify-stretch max-md:flex-col">
         <div className="fieldset flex-1">
           <label htmlFor="firstName" className="label">
             First Name
@@ -98,7 +106,7 @@ export default function CustomerInfo({ ref }) {
         className="input w-full"
         placeholder=""
       />
-      <div className="flex gap-5 justify-stretch">
+      <div className="flex gap-5 justify-stretch max-md:flex-col">
         <div className="fieldset flex-1">
           <label htmlFor="phone" className="label">
             Phone
