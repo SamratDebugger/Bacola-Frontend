@@ -24,6 +24,7 @@ export default function App() {
   return (
     <>
       <ToastContainer />
+
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

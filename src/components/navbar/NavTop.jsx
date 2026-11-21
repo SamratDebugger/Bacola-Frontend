@@ -8,7 +8,7 @@ export default function NavTop() {
   const { totalItem, subTotal } = useContext(CartContext);
   return (
     <header className="bg-base-100">
-      <div className="navbar max-w-360 mx-auto px-5 font-inter lg:gap-10">
+      <div className="navbar max-w-360 mx-auto px-5 font-inter lg:gap-10 ">
         <div className="navbar-start lg:w-auto gap-5">
           <div className="flex-none lg:hidden">
             <label

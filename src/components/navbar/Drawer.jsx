@@ -1,3 +1,5 @@
+import Dock from "../dock/Dock";
+import Footer from "../footer/Footer";
 import NavBottom from "./NavBottom";
 import NavTop from "./NavTop";
 
@@ -10,11 +12,17 @@ export default function Drawer({ children }) {
         className="drawer-toggle lg:hidden"
       />
       <div className="drawer-content flex flex-col">
-        {/* Navbar */}
-        <NavTop />
+        {/* Navbar */}{" "}
+        <div className="max-lg:sticky top-0 z-50">
+          <NavTop />
+        </div>
         <NavBottom />
         {/* Page content here */}
         <main>{children}</main>
+        <Footer />
+        <div className="lg:hidden p-5">
+          <Dock />
+        </div>
       </div>
       <div className="drawer-side">
         <label
@@ -22,7 +30,7 @@ export default function Drawer({ children }) {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu bg-base-200 min-h-full w-80 p-4">
+        <ul className="menu bg-base-200 min-h-full w-80 p-4 my-12">
           {/* Sidebar content here */}
           <li>
             <a>Sidebar Item 1</a>
