@@ -1,0 +1,3 @@
+export default function TrustBadge() {
+  return <div>TrustBadge</div>;
+}

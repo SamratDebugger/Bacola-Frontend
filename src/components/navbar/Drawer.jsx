@@ -1,5 +1,9 @@
 import Dock from "../dock/Dock";
-import Footer from "../footer/Footer";
+import CopyRight from "../footer/CopyRight";
+import FooterBottom from "../footer/FooterBottom";
+import FooterTop from "../footer/FooterTop";
+import NewsLetter from "../footer/NewsLetter";
+import TrustBadge from "../footer/TrustBadge";
 import NavBottom from "./NavBottom";
 import NavTop from "./NavTop";
 
@@ -19,7 +23,11 @@ export default function Drawer({ children }) {
         <NavBottom />
         {/* Page content here */}
         <main>{children}</main>
-        <Footer />
+        <NewsLetter />
+        <TrustBadge />
+        <FooterTop />
+        <FooterBottom />
+        <CopyRight />
         <div className="lg:hidden p-5">
           <Dock />
         </div>
