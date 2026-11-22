@@ -1,6 +1,5 @@
 import Dock from "../dock/Dock";
 import CopyRight from "../footer/CopyRight";
-import FooterBottom from "../footer/FooterBottom";
 import FooterTop from "../footer/FooterTop";
 import NewsLetter from "../footer/NewsLetter";
 import TrustBadge from "../footer/TrustBadge";
@@ -26,7 +25,6 @@ export default function Drawer({ children }) {
         <NewsLetter />
         <TrustBadge />
         <FooterTop />
-        <FooterBottom />
         <CopyRight />
         <div className="lg:hidden p-5">
           <Dock />
