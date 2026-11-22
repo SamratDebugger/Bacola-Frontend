@@ -1,6 +1,6 @@
 export default function FooterTop() {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-100  p-10 text-black max-w-360 mx-auto justify-between">
+    <footer className="footer sm:footer-horizontal bg-base-100  p-5 text-black max-w-360 mx-auto justify-between">
       <nav>
         <h6 className="footer-title">FRUIT & VEGETABLES</h6>
         <a className="link link-hover">Fresh Vegetables</a>
